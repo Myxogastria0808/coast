@@ -214,7 +214,7 @@ Have a nice day!
 
 ```toml
 [extra.coast]
-title = "Coast Blog"
+title = "coast blog"
 description = "The coast is beautiful."
 keyword = "blog coast sea"
 
@@ -292,7 +292,7 @@ My name is Myxogastria0808, and I like the sea too!
 
 I create a logo for my blog theme named "coast".
 
-{{ image(path="/content/coast/coast.webp") }}
+{{ image(path="/content/coast/coast.png") }}
 
 ```
 
