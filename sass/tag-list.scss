@@ -1,0 +1,45 @@
+//* Tag List Page *//
+.tag-list-page {
+  height: 100lvh;
+  width: 100%;
+  .title {
+    font-size: 2em;
+    text-align: center;
+    margin: 70px 0 50px 0;
+  }
+  .ul-wrapper {
+    display: flex;
+    justify-content: center;
+    ul {
+      display: inline-block;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 600px;
+      width: 100%;
+      overflow-x: visible;
+      li {
+        margin: 30px 0 30px 0;
+        a {
+          text-decoration: none;
+          div {
+            overflow-wrap: anywhere;
+            padding: 0 20px 5px 20px;
+            box-shadow: 11px 11px 22px #c7c7c7, -11px -11px 22px #f8f8f8;
+            h2 {
+              font-size: 1.7em;
+              margin: 0;
+              padding: 20px 0 20px 0;
+            }
+            p {
+              font-size: 0.9em;
+              margin: 0;
+              padding: 0;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

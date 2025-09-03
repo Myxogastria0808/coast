@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="{{ config.extra.coast.lang | safe }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="description"
+      content="{{ config.extra.coast.description | safe }}"
+    />
+    <meta name="keyword" content="{{ config.extra.coast.keyword | safe }}" />
+    {% block rss %}<link rel="alternate" type="application/rss+xml" title="RSS"
+    href="{{ get_url(path="rss.xml", trailing_slash=false) | safe }}">{%
+    endblock %}
+    <link
+      rel="icon"
+      href="{{ config.extra.coast.icon | safe }}"
+      type="image/svg+xml"
+    />
+    <meta name="theme-color" content="#d8d8d8" />
+    <!-- meta settings end -->
+    <!-- OG settings start -->
+    <meta
+      property="og:site_name"
+      content="{{ config.extra.coast.title | safe }}"
+    />
+    <meta property="og:title" content="{{ config.extra.coast.title | safe }}" />
+    <meta
+      property="og:description"
+      content="{{ config.extra.coast.description | safe }}"
+    />
+    <meta
+      property="og:image"
+      content="{{ config.extra.coast.meta_image | safe }}"
+    />
+    <meta
+      property="og:image:width"
+      content="{{ config.extra.coast.meta_image_width | safe }}"
+    />
+    <meta
+      property="og:image:height"
+      content="{{ config.extra.coast.meta_image_height | safe }}"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ config.base_url }}" />
+    <!-- OG settings end -->
+    <!-- Twitter card settings start -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:site"
+      content="{{ config.extra.coast.twitter_site | safe }}"
+    />
+    <meta
+      name="twitter:creator"
+      content="{{ config.extra.coast.twitter_creator | safe }}"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="{{ config.extra.coast.meta_image_alt | safe }}"
+    />
+    <!-- Twitter card settings end -->
+    <!-- Google fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google fonts end -->
+    <!-- CSS start -->
+    <link rel="stylesheet" href="{{ get_url(path="base.css",
+    trailing_slash=false) | safe }}">
+    <!-- CSS end -->
+    <!-- katex start -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/katex.min.css"
+      integrity="sha384-7lU0muIg/i1plk7MgygDUp3/bNRA65orrBub4/OSWHECgwEsY83HaS1x3bljA/XV"
+      crossorigin="anonymous"
+    />
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/katex.min.js"
+      integrity="sha384-RdymN7NRJ+XoyeRY4185zXaxq9QWOOx3O7beyyrRK4KQZrPlCDQQpCu95FoCGPAE"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/contrib/auto-render.min.js"
+      integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+    <!-- katex end -->
+    <title>{{ config.extra.coast.title | safe}}</title>
+  </head>
+  <body>
+    {% block content %} {% endblock %}
+    <!-- footer start -->
+    <footer>
+      <div class="credit">
+        <a href="https://yukiosada.work">
+          &copy;&ensp;<span id="year"></span>&ensp;Zola coast theme
+        </a>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <script type="module">
+      // loading
+      window.addEventListener("load", () => {
+        window.document.getElementById("loading")?.classList.add("loaded");
+      });
+      // mermaid
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true, theme: "light" });
+      // footer
+      window.document.getElementById("year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

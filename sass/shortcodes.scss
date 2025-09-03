@@ -1,0 +1,37 @@
+//* Shortcodes *//
+.alert-type {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 30px 0;
+}
+.alert-type-label {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+.note {
+  background-color: #0a68da80;
+}
+.tip {
+  background-color: #187f3280;
+}
+.important {
+  background-color: #7f4edf80;
+}
+.warning {
+  background-color: #98650180;
+}
+.caution {
+  background-color: #d0212b80;
+}
+.img-box {
+  width: fit-content;
+  margin: 0 auto;
+}
+.caption {
+  margin: 0;
+  padding: 5px 0 0 0;
+  font-size: 0.8em;
+  text-align: center;
+  color: #505050;
+}

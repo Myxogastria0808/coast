@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block content %}
+<!-- loading start -->
+{% include "components/loading.html" %}
+<!-- loading end -->
+<!-- header start -->
+{% include "components/main-header.html" %}
+<!-- header end -->
+<div
+  class="first-view"
+  style="background-image: url('{{ config.extra.coast.first_view_image | safe }}')"
+>
+  <h1 class="title">#{{ config.extra.coast.title | safe}}</h1>
+</div>
+<div class="about">
+  <h1 class="title">{{ config.extra.coast.about_title | safe}}</h1>
+  <p class="content">{{ config.extra.coast.about_description | safe}}</p>
+</div>
+<div class="blog-list-page">
+  <h1 class="title">Posts</h1>
+  <a href="{{ config.base_url }}/tags" class="tag-list">Check all tags >></a>
+  <ul>
+    {%for page in section.pages %}
+    <li>
+      <a class="post-link" href="{{ page.permalink | safe}}">
+        <p class="date">date:&ensp;{{ page.date | safe }}</p>
+        <p class="author">
+          author:&ensp;{%for author in page.authors %}{% if loop.last %}{{
+          author | safe }}{% else %}{{ author | safe }},&ensp;{% endif %} {%
+          endfor %}
+        </p>
+        <h2>{{ page.title | safe }}</h2>
+      </a>
+      <p class="tags">
+        {% for tag in page.taxonomies.tags %} {% if loop.last %}
+        <a href="{{ config.base_url }}/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >
+        {%else %}
+        <a href="{{ config.base_url }}/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >,&ensp; {% endif %} {% endfor %}
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}

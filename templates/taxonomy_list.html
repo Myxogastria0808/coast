@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+<!-- header start -->
+{% include "components/sub-header.html" %}
+<!-- header end -->
+<div class="tag-list-page">
+  <h1 class="title">Tag list</h1>
+  <div class="ul-wrapper">
+    <ul>
+      {% for term in terms %}
+      <li>
+        <a href="{{ term.permalink | safe }}">
+          <div>
+            <h2>#{{ term.name | safe }}</h2>
+            <p>(&ensp;{{ term.page_count | safe }}&ensp;Posts&ensp;)</p>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock content %}

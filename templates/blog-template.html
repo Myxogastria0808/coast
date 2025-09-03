@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block content %}
+<!-- header start -->
+{% include "components/sub-header.html" %}
+<!-- header end -->
+<div class="blog-page">
+  <div class="blog-content">
+    <!-- main content start -->
+    <div class="blog-container blog-config">
+      <h1 class="blog-title">{{ page.title | safe }}</h1>
+      <p class="blog-meta">
+        {% for tag in page.taxonomies.tags %}{% if loop.last %}
+        <a href="{{ config.base_url }}/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >
+        {%else %}
+        <a href="{{ config.base_url }}/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >,&ensp; {% endif %} {% endfor %}
+      </p>
+      <p class="blog-meta">
+        date:&ensp;{{ page.date | safe }}&emsp;&emsp;author:&ensp;{%for author
+        in page.authors %} {% if loop.last %}{{ author | safe }}{% else %}{{
+        author | safe }},&ensp;{% endif %}{% endfor %}
+      </p>
+      <p><a href="{{ config.base_url }}/">Back to blog posts</a></p>
+      {{ page.content | safe }}
+    </div>
+    <!-- main content end -->
+    <!-- table of contents start -->
+    <div class="toc-box">
+      {% if page.toc %}
+      <ul>
+        {% for h1 in page.toc %}
+        <li>
+          <a href="{{ h1.permalink | safe }}">{{ h1.title | safe }}</a>
+          {% if h1.children %}
+          <ul>
+            {% for h2 in h1.children %}
+            <li>
+              <a href="{{ h2.permalink | safe }}">{{ h2.title | safe }}</a>
+              {% if h2.children %}
+              <ul>
+                {% for h3 in h2.children %}
+                <li>
+                  <a href="{{ h3.permalink | safe }}">{{ h3.title | safe }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <!-- table of contents end-->
+  </div>
+</div>
+{% endblock content %}

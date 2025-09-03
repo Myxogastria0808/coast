@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+<!-- header start -->
+{% include "components/sub-header.html" %}
+<!-- header end -->
+<div class="blog-list-page">
+  <h1 class="title">#{{ term.name | safe }}</h1>
+  <ul>
+    {%for page in term.pages %}
+    <li>
+      <a class="post-link" href="{{ page.permalink | safe}}">
+        <p class="date">date:&ensp;{{ page.date | safe }}</p>
+        <p class="author">
+          author:&ensp;{%for author in page.authors %}{% if loop.last %}{{
+          author | safe }}{% else %}{{ author | safe }},&ensp;{% endif %} {%
+          endfor %}
+        </p>
+        <h2>{{ page.title | safe }}</h2>
+      </a>
+      <p class="tags">
+        {% for tag in page.taxonomies.tags %} {% if loop.last %}
+        <a href="{{ config.base_url }}/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >
+        {%else %}
+        <a href="{{ config.base_url }}/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >,&ensp; {% endif %} {% endfor %}
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}

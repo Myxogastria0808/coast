@@ -1,0 +1,43 @@
+@use "about";
+@use "blog-list";
+@use "blog";
+@use "error";
+@use "first-view";
+@use "loading";
+@use "main-header";
+@use "shortcodes";
+@use "sub-header";
+@use "tag-list";
+
+//* Base Settings *//
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #d8d8d8;
+  /* footer */
+  footer {
+    margin: auto 0 0 0;
+    padding: 0;
+    background-color: #d8d8d8;
+    box-shadow: 11px 11px 22px #c7c7c7, -11px -11px 22px #f8f8f8;
+    height: 150px;
+    .credit {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+* {
+  color: #000000;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

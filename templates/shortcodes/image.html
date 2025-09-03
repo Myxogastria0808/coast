@@ -1,0 +1,36 @@
+{# body #} {% if width and height %} {# for custom image #} {# width: true,
+height: true #} {% set image = resize_image(path=path, height=height,
+width=width, op="fill", format="webp", quality=75) %}
+<div class="img-box">
+  <img
+    src="{{ image.url | safe }}"
+    style="max-width: 100%; max-height: 100svh"
+  />
+</div>
+{% elif width %} {# for horizontal image (sub function) #} {# width: true,
+height: false #} {% set image = resize_image(path=path, width=width,
+op="fit_width", format="webp", quality=75) %}
+<div class="img-box">
+  <img
+    src="{{ image.url | safe }}"
+    style="max-width: 100%; max-height: 100svh"
+  />
+</div>
+{% elif height %} {# for vertical image #} {# width: false, height: true #} {%
+set image = resize_image(path=path, height=height, op="fit_height",
+format="webp", quality=75) %}
+<div class="img-box">
+  <img
+    src="{{ image.url | safe  }}"
+    style="max-width: 100%; max-height: 100svh"
+  />
+</div>
+{% else %} {# for horizontal image (main function) #} {# width: false, height:
+false #} {% set image = resize_image(path=path, width=2000, op="fit_width",
+format="webp", quality=75) %}
+<div class="img-box">
+  <img src="{{ image.url | safe }}" width="100%" />
+</div>
+{% endif %} {# caption #} {% if caption %}
+<p class="caption">{{ caption | safe }}</p>
+{% endif %}

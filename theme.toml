@@ -1,0 +1,51 @@
+name = "coast"
+description = "A simple theme for Zola that evokes the feel the sea breeze."
+# An optional tags to allow quick search
+tags = ["light", "simple", "mermaid", "katex"]
+license = "MIT"
+homepage = "https://github.com/Myxogastria0808/coast/"
+# The minimum version of Zola required
+min_version = "0.19.0"
+# An optional live demo URL
+demo = "https://zola-coast-theme.netlify.app/"
+
+# Any variable there can be overridden in the end user `config.toml`
+# You don't need to prefix variables by the theme name but as this will
+# be merged with user data, some kind of prefix or nesting is preferable
+# Use snake_casing to be consistent with the rest of Zola
+[extra.coast]
+# default value: 'en'
+lang = "en"
+# default value: 'coast theme'
+title = "coast theme"
+# default value: 'This blog is made by zola.'
+description = "This blog is made by zola."
+# default value: 'blog'
+keyword = "blog"
+# default value: 'https://raw.githubusercontent.com/Myxogastria0808/coast/heads/main/static/favicon.svg'
+# A shortcut icon has to be a SVG image.
+icon = "https://raw.githubusercontent.com/Myxogastria0808/coast/heads/main/static/favicon.svg"
+# default value: ''
+twitter_site = ""
+# default value: '@yuki_osada0808'
+twitter_creator = "@yuki_osada0808"
+# default value: 'https://raw.githubusercontent.com/Myxogastria0808/coast/heads/main/static/first-view.jpg'
+meta_image = "https://raw.githubusercontent.com/Myxogastria0808/coast/heads/main/static/first-view.jpg"
+# default value: 'coast theme'
+meta_image_alt = "coast theme"
+# default value: '3024'
+meta_image_width = "3024"
+# default value: '3024'
+meta_image_height = "3024"
+
+# default value: 'https://raw.githubusercontent.com/Myxogastria0808/coast/heads/main/static/first-view.jpg'
+first_view_image = "https://raw.githubusercontent.com/Myxogastria0808/coast/heads/main/static/first-view.jpg"
+# default value: 'Hello, World!'
+about_title = "Hello, World!"
+# default value is below
+about_description = """
+Hello, my name is Myxogastria0808.<br/>
+I created a Zola theme named "coast".
+This template can be used mermaid and katex.<br/>
+Have a nice day!
+"""
