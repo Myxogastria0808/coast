@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="{{ config.title | safe }}" />
     <meta
       property="og:title"
-      content="{% if page %}{{ page.title }} - {{ config.title }}{% else %}{{ config.title }}{% endif %}"
+      content="{% if page %}{{ page.title | safe }} - {{ config.title | safe }}{% else %}{{ config.title | safe }}{% endif %}"
     />
     <meta
       property="og:description"
@@ -92,8 +92,8 @@
     ></script>
     <!-- katex end -->
     <title>
-      {% if page %}{{ page.title }} - {{ config.title }}{% else %}{{
-      config.title }}{% endif %}
+      {% if page %}{{ page.title | safe }} - {{ config.title | safe }}{% else
+      %}{{ config.title | safe }}{% endif %}
     </title>
   </head>
   <body>
