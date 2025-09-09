@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      property="description"
-      content="{{ config.extra.coast.description | safe }}"
-    />
+    <meta property="description" content="{{ config.description | safe }}" />
     <meta name="keyword" content="{{ config.extra.coast.keyword | safe }}" />
     {% block rss %}<link rel="alternate" type="application/rss+xml" title="RSS"
     href="{{ get_url(path="rss.xml", trailing_slash=false) | safe }}">{%
@@ -19,15 +16,12 @@
     <meta name="theme-color" content="#d8d8d8" />
     <!-- meta settings end -->
     <!-- OG settings start -->
+    <meta property="og:site_name" content="{{ config.title | safe }}" />
     <meta
-      property="og:site_name"
-      content="{{ config.extra.coast.title | safe }}"
+      property="og:title"
+      content="{% if page %}{{ page.title }} - {{ config.title }}{% else %}{{ config.title }}{% endif %}"
     />
-    <meta property="og:title" content="{{ config.extra.coast.title | safe }}" />
-    <meta
-      property="og:description"
-      content="{{ config.extra.coast.description | safe }}"
-    />
+    <meta property="og:description" content="{{ config.description | safe }}" />
     <meta
       property="og:image"
       content="{{ config.extra.coast.meta_image | safe }}"
@@ -94,7 +88,10 @@
       onload="renderMathInElement(document.body);"
     ></script>
     <!-- katex end -->
-    <title>{{ config.extra.coast.title | safe}}</title>
+    <title>
+      {% if page %}{{ page.title }} - {{ config.title }}{% else %}{{
+      config.title }}{% endif %}
+    </title>
   </head>
   <body>
     {% block content %} {% endblock %}

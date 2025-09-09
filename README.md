@@ -175,10 +175,6 @@ All settings have default values, so you only need to add the settings you want 
 [extra.coast]
 # default value: 'en'
 lang = "en"
-# default value: 'coast theme'
-title = "coast theme"
-# default value: 'This blog is made by zola.'
-description = "This blog is made by zola."
 # default value: 'blog'
 keyword = "blog"
 # default value: 'https://raw.githubusercontent.com/Myxogastria0808/coast/heads/main/static/favicon.svg'
@@ -214,8 +210,6 @@ Have a nice day!
 
 ```toml
 [extra.coast]
-title = "coast blog"
-description = "The coast is beautiful."
 keyword = "blog coast sea"
 
 about = """
