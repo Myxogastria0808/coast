@@ -45,3 +45,8 @@ I created a Zola theme named "coast".
 This template can be used mermaid and katex.<br/>
 Have a nice day!
 """
+
+# The theme author info: you!
+[author]
+name = "Myxogastria0808"
+homepage = "https://yukiosada.work"
