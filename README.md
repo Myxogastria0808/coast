@@ -11,13 +11,13 @@ https://zola-coast-theme.netlify.app/
 - [theme logo](https://github.com/Myxogastria0808/coast/blob/main/logo/README.md)
 
 <div align="center">
-  <img src="https://github.com/Myxogastria0808/coast/blob/main/logo/coast.svg" width="300px" height="300px" />
+  <img src="https://raw.githubusercontent.com/Myxogastria0808/coast/refs/heads/main/logo/coast.svg" width="300px" height="300px" />
 </div>
 
 - screenshot
 
 <div align="center">
-  <img src="https://github.com/Myxogastria0808/coast/blob/main/screenshot.png" width="1920px" height="935px" />
+  <img src="https://raw.githubusercontent.com/Myxogastria0808/coast/refs/heads/main/screenshot.png" width="1920px" height="935px" />
 </div>
 
 ## Setup Environment
