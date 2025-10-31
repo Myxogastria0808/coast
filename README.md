@@ -6,7 +6,7 @@ This theme can be used **mermaid** and **katex**.
 
 - demo site
 
-https://zola-coast-theme.netlify.app/
+[https://zola-coast-theme.netlify.app/](https://zola-coast-theme.netlify.app/)
 
 - [theme logo](https://github.com/Myxogastria0808/coast/blob/main/logo/README.md)
 
@@ -26,7 +26,7 @@ https://zola-coast-theme.netlify.app/
 
 Please install zola by referring to the following.
 
-https://www.getzola.org/documentation/getting-started/installation/
+[https://www.getzola.org/documentation/getting-started/installation/](https://www.getzola.org/documentation/getting-started/installation/)
 
 2. Setup coast theme
 
@@ -255,11 +255,11 @@ The following sample have been set up.
 
 - repository
 
-https://github.com/Myxogastria0808/coast-sample.git
+[https://github.com/Myxogastria0808/coast-sample.git](https://github.com/Myxogastria0808/coast-sample.git)
 
 - demo site
 
-https://zola-coast-theme-sample.netlify.app/
+[https://zola-coast-theme-sample.netlify.app/](https://zola-coast-theme-sample.netlify.app/)
 
 ## Post Example
 
@@ -294,17 +294,17 @@ Please refer to the following for an actual example.
 
 - markdown example
 
-https://github.com/Myxogastria0808/coast/blob/main/content/sample/index.md
+[https://github.com/Myxogastria0808/coast/blob/main/content/sample/index.md](https://github.com/Myxogastria0808/coast/blob/main/content/sample/index.md)
 
 - preview URL
 
-https://zola-coast-theme.netlify.app/sample/
+[https://zola-coast-theme.netlify.app/sample/](https://zola-coast-theme.netlify.app/sample/)
 
 ## coast Theme Specific Notation
 
 ### List of languages in Code Block
 
-https://www.getzola.org/documentation/content/syntax-highlighting/
+[https://www.getzola.org/documentation/content/syntax-highlighting/](https://www.getzola.org/documentation/content/syntax-highlighting/)
 
 #### Example
 
@@ -330,11 +330,11 @@ You can see the image shortcode examples below.
 
 - markdown example
 
-https://github.com/Myxogastria0808/coast/blob/main/content/sample/index.md
+[https://github.com/Myxogastria0808/coast/blob/main/content/sample/index.md](https://github.com/Myxogastria0808/coast/blob/main/content/sample/index.md)
 
 - preview URL
 
-https://zola-coast-theme.netlify.app/sample/
+[https://zola-coast-theme.netlify.app/sample/](https://zola-coast-theme.netlify.app/sample/)
 
 #### Example applying all of `width`, `height`, and `caption`
 
@@ -529,6 +529,6 @@ The following is expressed in pseudo-HTML.
 
 ## References
 
-https://www.getzola.org/documentation/getting-started/overview/#content
+[https://www.getzola.org/documentation/getting-started/overview/#content](https://www.getzola.org/documentation/getting-started/overview/#content)
 
-https://swaits.com/adding-mermaid-js-to-zola/
+[https://swaits.com/adding-mermaid-js-to-zola/](https://swaits.com/adding-mermaid-js-to-zola/)
