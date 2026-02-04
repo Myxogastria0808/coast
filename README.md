@@ -120,11 +120,13 @@ taxonomies = [
     {name = "tags", feed = true},
 ]
 
-[markdown]
-# Whether to do syntax highlighting
-# Theme can be customized by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
+[markdown.highlighting]
+# The syntax highlighting theme to use in light mode
+light_theme = "github-light"
+# The syntax highlighting theme to use in dark mode
+dark_theme = "github-dark"
 
+[markdown]
 # When set to "true", emoji aliases translated to their corresponding
 # Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
 render_emoji = true
