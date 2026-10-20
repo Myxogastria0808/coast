@@ -22,25 +22,25 @@ Various notation methods are listed below.
 
 # note
 
-{% note() %}
+{% <note> %}
 This is a note.
-{% end %}
+{% </note> %}
 
-{% tip() %}
+{% <tip> %}
 This is a tip.
-{% end %}
+{% </tip> %}
 
-{% important() %}
+{% <important> %}
 This is a important.
-{% end %}
+{% </important> %}
 
-{% warning() %}
+{% <warning> %}
 This is a warning.
-{% end %}
+{% </warning> %}
 
-{% caution() %}
+{% <caution> %}
 This is a caution.
-{% end %}
+{% </caution> %}
 
 # Tips
 
@@ -99,32 +99,32 @@ program file sample: [here](sample.rs).
 
 # mermaid
 
-{% mermaid() %}
+{% <mermaid> %}
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-{% end %}
+{% </mermaid> %}
 
 # image
 
 image with caption
 
-{{ image(path="/content/sample/image.jpg", width=1000, height=200, caption="caption") }}
+{{ <image path="/content/sample/image.jpg" width={1000} height={200} caption="caption" /> }}
 
 custom image
 
-{{ image(path="/content/sample/image.jpg", width=100, height=200) }}
+{{ <image path="/content/sample/image.jpg" width={100} height={200} /> }}
 
 image (for vertical image)
 
-{{ image(path="/content/sample/image.jpg", height=200) }}
+{{ <image path="/content/sample/image.jpg" height={200} /> }}
 
 image (for horizontal image: pattern1)
 
-{{ image(path="/content/sample/image.jpg") }}
+{{ <image path="/content/sample/image.jpg" /> }}
 
 image (for horizontal image: pattern2)
 
-{{ image(path="/content/sample/image.jpg", width=300) }}
+{{ <image path="/content/sample/image.jpg" width={300} /> }}
