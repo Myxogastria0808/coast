@@ -1,0 +1,78 @@
+{# alert components #}
+{% component note() %}
+<div class="note alert-type">
+  <p class="alert-type-label">NOTE</p>
+  {{ body | safe }}
+</div>
+{% endcomponent note %}
+
+{% component tip() %}
+<div class="tip alert-type">
+  <p class="alert-type-label">TIP</p>
+  {{ body | safe }}
+</div>
+{% endcomponent tip %}
+
+{% component important() %}
+<div class="important alert-type">
+  <p class="alert-type-label">IMPORTANT</p>
+  {{ body | safe }}
+</div>
+{% endcomponent important %}
+
+{% component warning() %}
+<div class="warning alert-type">
+  <p class="alert-type-label">WARNING</p>
+  {{ body | safe }}
+</div>
+{% endcomponent warning %}
+
+{% component caution() %}
+<div class="caution alert-type">
+  <p class="alert-type-label">CAUTION</p>
+  {{ body | safe }}
+</div>
+{% endcomponent caution %}
+
+{# mermaid component #}
+{% component mermaid() %}
+<pre class="mermaid">
+  {{ body }}
+</pre>
+{% endcomponent mermaid %}
+
+{# image component #}
+{% component image(path: string, width: integer = 0, height: integer = 0, caption: string = "") %}
+{% if width and height %} {# for custom image #} {# width: true, height: true #}
+{% set image = resize_image(path=path, height=height, width=width, op="fill", format="webp", quality=75) %}
+<div class="img-box">
+  <img
+    src="{{ image.url | safe }}"
+    style="max-width: 100%; max-height: 100svh"
+  />
+</div>
+{% elif width %} {# for horizontal image (sub function) #} {# width: true, height: false #}
+{% set image = resize_image(path=path, width=width, op="fit_width", format="webp", quality=75) %}
+<div class="img-box">
+  <img
+    src="{{ image.url | safe }}"
+    style="max-width: 100%; max-height: 100svh"
+  />
+</div>
+{% elif height %} {# for vertical image #} {# width: false, height: true #}
+{% set image = resize_image(path=path, height=height, op="fit_height", format="webp", quality=75) %}
+<div class="img-box">
+  <img
+    src="{{ image.url | safe }}"
+    style="max-width: 100%; max-height: 100svh"
+  />
+</div>
+{% else %} {# for horizontal image (main function) #} {# width: false, height: false #}
+{% set image = resize_image(path=path, width=2000, op="fit_width", format="webp", quality=75) %}
+<div class="img-box">
+  <img src="{{ image.url | safe }}" width="100%" />
+</div>
+{% endif %} {# caption #} {% if caption %}
+<p class="caption">{{ caption | safe }}</p>
+{% endif %}
+{% endcomponent image %}
